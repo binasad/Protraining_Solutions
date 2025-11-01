@@ -1,0 +1,21 @@
+# Frontend Build Image
+FROM node:18-alpine AS frontend-builder
+
+WORKDIR /app/frontend
+
+# Copy frontend package files
+COPY package*.json ./
+COPY tsconfig.json ./
+
+# Install frontend dependencies
+RUN npm ci --only=production
+
+# Copy frontend source code
+COPY src/ ./src/
+COPY public/ ./public/
+
+# Build the React application
+RUN npm run build
+
+# This image is used for building only, not for runtime
+# The build output is available at /app/frontend/build

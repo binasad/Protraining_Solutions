@@ -1,0 +1,266 @@
+.policies-page {
+  min-height: 100vh;
+}
+
+/* Header Section */
+.policies-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.policies-header h1 {
+  font-size: 3rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.policies-header p {
+  font-size: 1.3rem;
+  color: #475569;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Policies Section */
+.policies-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.policy-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.policy-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+}
+
+.policy-card h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.policy-card > p {
+  color: #475569;
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.policy-details {
+  margin-bottom: 25px;
+}
+
+.policy-details h3 {
+  color: #1e293b;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.policy-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-details ul li {
+  color: #475569;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.policy-details ul li::before {
+  content: "•";
+  color: #2563eb;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.policy-card .btn {
+  width: 100%;
+}
+
+/* Policy Updates */
+.policy-updates {
+  padding: 80px 0;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+.policy-updates h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.policy-updates > .container > p {
+  font-size: 1.2rem;
+  color: #475569;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.update-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.update-item {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.update-item h3 {
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.update-item p {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Policy Contact */
+.policy-contact {
+  padding: 80px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.policy-contact h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.policy-contact p {
+  font-size: 1.2rem;
+  color: #475569;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-method {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.contact-method h3 {
+  color: #1e293b;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-method p {
+  color: #475569;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policies-header h1,
+  .policy-updates h2,
+  .policy-contact h2 {
+    font-size: 2rem;
+  }
+
+  .policies-header p {
+    font-size: 1.2rem;
+  }
+
+  .policies-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .update-info,
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .policy-card,
+  .update-item,
+  .contact-method {
+    padding: 25px;
+  }
+
+  .policy-updates > .container > p,
+  .policy-contact p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .policies-header h1,
+  .policy-updates h2,
+  .policy-contact h2 {
+    font-size: 1.75rem;
+  }
+
+  .policies-header p {
+    font-size: 1.1rem;
+  }
+
+  .policy-card,
+  .update-item,
+  .contact-method {
+    padding: 20px;
+  }
+
+  .policy-icon {
+    font-size: 2.5rem;
+  }
+
+  .policy-updates > .container > p,
+  .policy-contact p {
+    font-size: 1rem;
+  }
+}

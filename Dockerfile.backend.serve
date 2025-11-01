@@ -1,0 +1,31 @@
+# Backend Runtime Image
+# Stage 1: Build Node.js backend
+FROM node:18-alpine AS backend-builder
+
+WORKDIR /app/backend
+
+# Copy backend package files
+COPY backend/package*.json ./
+
+# Install backend dependencies
+RUN npm ci --only=production
+
+# Copy backend source code
+COPY backend/ ./
+
+# Stage 2: Runtime - Node.js API server
+FROM node:18-alpine AS backend-runtime
+
+WORKDIR /app
+
+# Copy backend dependencies and source code
+COPY --from=backend-builder /app/backend /app/backend
+
+# Install necessary runtime packages like dumb-init for proper signal handling
+RUN apk add --no-cache dumb-init
+
+# Expose port 5000 for the API
+EXPOSE 5000
+
+# Start the backend API
+CMD ["dumb-init", "--", "npm", "start"]

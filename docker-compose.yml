@@ -1,0 +1,35 @@
+version: '3'
+services:
+  # Frontend: Build and serve React app
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend.serve  # Serve the built React app via Nginx
+    ports:
+      - "80:80"  # Expose frontend on port 80
+    depends_on:
+      - backend
+
+  # Backend: Serve Node.js API
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend.serve  # Serve the Node.js API
+    ports:
+      - "5000:5000"  # Expose backend API on port 5000
+
+  # Frontend Build: Build the React app
+  frontend-build:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend.build  # Build the React app
+    volumes:
+      - ./frontend-build:/app/frontend-build  # Store build output in frontend-build folder
+
+  # Backend Build: Build the Node.js API
+  backend-build:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend.build  # Build the Node.js backend
+    volumes:
+      - ./backend:/app/backend  # Use backend source code from the project folder

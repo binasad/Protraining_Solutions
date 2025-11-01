@@ -1,0 +1,15 @@
+# Stage 1: Build Node.js backend
+FROM node:18-alpine AS backend-builder
+
+WORKDIR /app/backend
+
+# Copy backend package files
+COPY backend/package*.json ./
+
+# Install backend dependencies
+RUN npm ci --only=production
+
+# Copy backend source code
+COPY backend/ ./backend
+
+# Final image will copy backend files and dependencies

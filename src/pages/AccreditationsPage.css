@@ -1,0 +1,322 @@
+.accreditations-page {
+  min-height: 100vh;
+}
+
+/* Accreditations Header */
+.accreditations-header {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); /* Darker to medium desaturated blue-grey */
+  color: white;
+  padding: 80px 0;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.header-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: white !important; /* Ensure white color for header text */
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  color: white !important; /* Ensure white color for header description */
+}
+
+.accreditations-hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(45, 55, 72, 0.3);
+}
+
+/* Accreditations Section */
+.accreditations-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.accreditations-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.accreditations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.accreditation-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(45, 55, 72, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accreditation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(45, 55, 72, 0.15);
+}
+
+.accreditation-logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a5568; /* Medium desaturated blue-grey */
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f7fafc; /* Very light desaturated blue-grey */
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.accreditation-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.accreditation-card p {
+  color: #718096; /* Medium-light desaturated blue-grey */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.accreditation-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status.approved {
+  background: #10b981;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.validity {
+  color: #718096; /* Medium-light desaturated blue-grey */
+  font-size: 0.9rem;
+}
+
+/* Certifications Section */
+.certifications-section {
+  padding: 80px 0;
+  background: #f7fafc; /* Very light desaturated blue-grey */
+}
+
+.certifications-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.certification-item {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(45, 55, 72, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(45, 55, 72, 0.15);
+}
+
+.certification-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.certification-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.certification-item p {
+  color: #718096; /* Medium-light desaturated blue-grey */
+  line-height: 1.6;
+}
+
+/* Memberships Section */
+.memberships-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.memberships-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.memberships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.membership-item {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(45, 55, 72, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(45, 55, 72, 0.15);
+}
+
+.membership-logo {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.membership-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.membership-item p {
+  color: #718096; /* Medium-light desaturated blue-grey */
+  line-height: 1.6;
+}
+
+/* Quality Assurance */
+.quality-assurance {
+  padding: 80px 0;
+  background: #f7fafc; /* Very light desaturated blue-grey */
+}
+
+.quality-assurance h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.quality-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.quality-feature {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(45, 55, 72, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quality-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(45, 55, 72, 0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.quality-feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2d3748; /* Darker desaturated blue-grey */
+}
+
+.quality-feature p {
+  color: #718096; /* Medium-light desaturated blue-grey */
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .accreditations-hero-img {
+    height: 300px;
+  }
+
+  .accreditations-section h2,
+  .certifications-section h2,
+  .memberships-section h2,
+  .quality-assurance h2 {
+    font-size: 2rem;
+  }
+
+  .accreditations-grid,
+  .certifications-grid,
+  .memberships-grid,
+  .quality-features {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accreditations-header {
+    padding: 60px 0;
+  }
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .accreditations-section,
+  .certifications-section,
+  .memberships-section,
+  .quality-assurance {
+    padding: 60px 0;
+  }
+
+  .accreditation-card,
+  .certification-item,
+  .membership-item,
+  .quality-feature {
+    padding: 25px;
+    margin: 0 20px;
+  }
+}
